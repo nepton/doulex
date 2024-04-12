@@ -2,7 +2,8 @@
 	<s:String x:Key="/Default/CodeInspection/PencilsConfiguration/FiltersState/=NamingFilter/@EntryIndexedValue">On</s:String>
 	<s:String x:Key="/Default/CodeInspection/PencilsConfiguration/FiltersState/=SpellingFilter/@EntryIndexedValue">On</s:String>
 	<s:String x:Key="/Default/Environment/Highlighting/HighlightingMode/@EntryValue">OnlyMarkers</s:String>
-	<s:String x:Key="/Default/Environment/Highlighting/HighlightingSourceSnapshotLocation/@EntryValue">C:\Users\Nepton\AppData\Local\JetBrains\Rider2023.3\resharper-host\temp\Rider\vAny\CoverageData\_Doulex.-1654091854\Snapshot\snapshot.utdcvr</s:String>
+	<s:String x:Key="/Default/Environment/Highlighting/HighlightingSourceSnapshotLocation/@EntryValue">C:\Users\Nepton\AppData\Local\JetBrains\Rider2024.1\resharper-host\temp\Rider\vAny\CoverageData\_Doulex.-1654091854\Snapshot\snapshot.utdcvr</s:String>
+	
 	<s:String x:Key="/Default/Environment/UnitTesting/CreateUnitTestDialog/TestProjectMapping/=6A710580_002DE599_002D4207_002DA1A8_002D11A8FBD160DB/@EntryIndexedValue">21BF4ABB-D84B-4E1D-91E0-C873484FEF13</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/CreateUnitTestDialog/TestTemplateMapping/=xUnit/@EntryIndexedValue">33ff99d8-b1ad-4ed5-a4fd-376b97c2c841</s:String>
 	
@@ -10,10 +11,10 @@
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=3e0c4e04_002D6f9b_002D4939_002Db69e_002D0fb6845e38fc/@EntryIndexedValue">&lt;SessionState ContinuousTestingIsOn="True" ContinuousTestingMode="3" Name="All tests from &amp;lt;tests&amp;gt;\&amp;lt;Doulex.Toolkit.Tests&amp;gt;" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;Project Location="D:\Project\Doulex\Doulex.Toolkits\tests\Doulex.Toolkit.Tests" Presentation="&amp;lt;tests&amp;gt;\&amp;lt;Doulex.Toolkit.Tests&amp;gt;" /&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ba63774f_002D2b33_002D4d36_002Dbf2c_002Ddd3e2a03c98e/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="TestAlmostEqual" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ba63774f_002D2b33_002D4d36_002Dbf2c_002Ddd3e2a03c98e/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TestAlmostEqual" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;Project Location="D:\Project\Doulex\Doulex\tests\UnitTest.Doulex" Presentation="&amp;lt;tests&amp;gt;\&amp;lt;UnitTest.Doulex&amp;gt;" /&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=e5d9775d_002D64b0_002D4808_002Da007_002Dcf00fd8e1be8/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TestAlmostEqual #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=e5d9775d_002D64b0_002D4808_002Da007_002Dcf00fd8e1be8/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="TestAlmostEqual #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;Project Location="D:\Project\Doulex\Doulex\tests\UnitTest.Doulex" Presentation="&amp;lt;tests&amp;gt;\&amp;lt;UnitTest.Doulex&amp;gt;" /&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=src_002FDoulex_002EPinyin_002FPinyinResource/@EntryIndexedValue">True</s:Boolean>
