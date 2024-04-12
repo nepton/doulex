@@ -6,9 +6,61 @@
 /// Until <see cref="DisposableList.Clear()"/> invoked, the <see cref="DisposableList"/> will not dispose the disposable objects.
 /// </summary>
 /// <example>
+/// Before use the <see cref="DisposableList"/>. You should dispose the disposable objects manually.
+/// 
 /// ```csharp
-/// public Handler CreateHandler(string param1, string param2)
+/// public Handle? CreateHandler(string param1, string param2)
 /// {
+///     Resource1? resource1 = null;
+///     Resource2? resource2 = null;
+///     Resource3? resource3 = null;
+///     bool disposeResource = false;
+/// 
+///     try
+///     {
+///         // Create the resource1
+///         resource1 = new Resource1(param1);
+///         if(resource1.IsError)
+///         {
+///             throw new Exception(resource1.Error);
+///         }
+///     
+///         // Create the resource2
+///         resource2 = new Resource2(param2);
+///         if(!resource2.Initialize())
+///         {
+///             disposeResource = true;
+///             return null;
+///         }
+/// 
+///         // Create the resource3
+///         resource3 = new Resource3(resource1, resource2);
+/// 
+///         // Create success. Return the resource3
+///         return resource3;
+///     }
+///     catch
+///     {
+///         disposeResource = true;
+///     }
+///     finally
+///     {
+///         if(disposeResource)
+///         {
+///             resource3?.Dispose();
+///             resource2?.Dispose();
+///             resource1?.Dispose();
+///         }
+///     }
+/// }
+/// ```
+///
+/// After use the <see cref="DisposableList"/>. The code is simpler and more readable.
+/// 
+/// ```csharp
+/// public Handler? CreateHandler(string param1, string param2)
+/// {
+///     // All disposable objects will be disposed when the using block leave the scope.
 ///     using var disposableList = new DisposableList();
 ///
 ///     // Create the resource1
@@ -20,7 +72,10 @@
 /// 
 ///     // Create the resource2
 ///     var resource2 = disposableList.Add(new Resource2(param2));
-///     resource2.Initialize();
+///     if(!resource2.Initialize())
+///     {
+///         return null;
+///     }
 ///
 ///     // Create the resource3
 ///     var resource3 = disposableList.Add(new Resource3(resource1, resource2));
