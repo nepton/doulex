@@ -19,23 +19,9 @@ public class MonitoringStream : Stream
     }
 
     /// <summary>
-    /// The stats of the stream for data sent
+    /// The stats of the stream
     /// </summary>
-    public Counter Sent { get; } = new(1000);
-
-    /// <summary>
-    /// The stats of the stream for data received
-    /// </summary>
-    public Counter Received { get; } = new(1000);
-
-    /// <summary>
-    /// Reset the counters
-    /// </summary>
-    public void ResetCounters()
-    {
-        Sent.Reset();
-        Received.Reset();
-    }
+    public MonitoringStreamCounter Counter { get; } = new();
 
     /// <inheritdoc />
     public override long Seek(long offset, SeekOrigin origin)
@@ -65,7 +51,7 @@ public class MonitoringStream : Stream
 
         if (count > 0)
         {
-            Sent.AddSample(count);
+            Counter.Sent.AddSample(count);
         }
     }
 
@@ -86,7 +72,7 @@ public class MonitoringStream : Stream
 
         if (bytesRead > 0)
         {
-            Received.AddSample(bytesRead);
+            Counter.Received.AddSample(bytesRead);
         }
 
         return bytesRead;
