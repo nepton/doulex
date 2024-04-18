@@ -1,17 +1,17 @@
 ﻿using System.Diagnostics;
 
-namespace Doulex.Performance;
+namespace Doulex.Monitoring;
 
 /// <summary>
 /// Counter is used to count the data and the velocity of the count.
 /// </summary>
-public class Counter
+public class CounterTracker
 {
     /// <summary>
     /// 
     /// </summary>
     /// <param name="updateIntervalInMs">The latest velocity update interval in ms</param>
-    public Counter(int updateIntervalInMs)
+    public CounterTracker(int updateIntervalInMs)
     {
         _updateInterval = updateIntervalInMs;
     }
@@ -94,10 +94,8 @@ public class Counter
     /// Add count to the stat
     /// </summary>
     /// <param name="count">Number of the count</param>
-    public void AddSample(int count)
+    public void Add(int count)
     {
-        UpdateVelocity();
-
         Interlocked.Add(ref _totalCount,  count);
         Interlocked.Add(ref _recentCount, count);
     }

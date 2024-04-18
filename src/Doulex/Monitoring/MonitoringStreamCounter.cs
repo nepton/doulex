@@ -1,6 +1,4 @@
-using Doulex.Performance;
-
-namespace Doulex.IO;
+namespace Doulex.Monitoring;
 
 /// <summary>
 /// Monitoring stream counter
@@ -10,12 +8,12 @@ public class MonitoringStreamCounter
     /// <summary>
     /// The stats of the stream for data sent
     /// </summary>
-    public Counter Sent { get; } = new(1000);
+    public CounterTracker Sent { get; } = new(1000);
 
     /// <summary>
     /// The stats of the stream for data received
     /// </summary>
-    public Counter Received { get; } = new(1000);
+    public CounterTracker Received { get; } = new(1000);
 
     /// <summary>
     /// Reset the stats

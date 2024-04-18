@@ -1,6 +1,4 @@
-﻿using Doulex.Performance;
-
-namespace Doulex.IO;
+﻿namespace Doulex.Monitoring;
 
 /// <summary>
 /// A monitoring stream or called pass through stream, it used to intercept the data and calculate the data rate.
@@ -51,7 +49,7 @@ public class MonitoringStream : Stream
 
         if (count > 0)
         {
-            Counter.Sent.AddSample(count);
+            Counter.Sent.Add(count);
         }
     }
 
@@ -72,7 +70,7 @@ public class MonitoringStream : Stream
 
         if (bytesRead > 0)
         {
-            Counter.Received.AddSample(bytesRead);
+            Counter.Received.Add(bytesRead);
         }
 
         return bytesRead;
